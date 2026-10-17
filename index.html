@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Piezas impresas · Clean Solutions LIM</title>
+<link rel="icon" href="img/flyer-1.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+/* Hoja de contacto de imprenta: columna central, piezas en rejilla, notas al pie */
+:root {
+  --bg: #f4f7f9; --surface: #ffffff; --fg: #0b1633; --muted: #4a5878; --line: rgba(0,16,80,.12);
+  --brand: #001050; --accent: #12998d; --accent-2: #2ec4b6; --warn: #c4492a;
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #070d24; --surface: #0f1938; --fg: #e8eefb; --muted: #a3b0cc; --line: rgba(255,255,255,.12);
+  --brand: #8fb4ff; --accent: #2ec4b6; --accent-2: #2ec4b6; --warn: #ff9a7d; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #070d24; --surface: #0f1938; --fg: #e8eefb; --muted: #a3b0cc; --line: rgba(255,255,255,.12);
+  --brand: #8fb4ff; --accent: #2ec4b6; --accent-2: #2ec4b6; --warn: #ff9a7d; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 40px 64px; display: grid; gap: 56px; }
+h1, h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: .95; letter-spacing: .005em; text-wrap: balance; color: var(--brand); }
+h1 { font-size: clamp(40px, 7vw, 72px); }
+h1 span { color: var(--accent-2); }
+h2 { font-size: clamp(28px, 4vw, 40px); }
+.eyebrow { font-weight: 800; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
+.lead { max-width: 65ch; color: var(--muted); font-size: 17px; margin-top: 14px; }
+header { display: grid; gap: 8px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.facts span { border: 1px solid var(--line); border-radius: 99px; padding: 5px 12px; font-size: 13px; font-weight: 700; background: var(--surface); }
+section { display: grid; gap: 20px; }
+.head { display: grid; gap: 6px; }
+.grid5 { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+figure { margin: 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+figure a { display: block; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,16,80,.12), 0 8px 24px rgba(0,16,80,.10); background: var(--surface); }
+figure a:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+figure img { width: 100%; height: auto; display: block; }
+figcaption b { display: block; font-family: var(--display); font-size: 20px; text-transform: uppercase; color: var(--brand); line-height: 1.05; }
+figcaption { font-size: 13.5px; color: var(--muted); }
+.code { font-variant-numeric: tabular-nums; font-weight: 800; color: var(--accent); }
+.before { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 32px; align-items: start; }
+.before ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; max-width: 65ch; }
+.before li::marker { color: var(--warn); }
+.tri { display: grid; gap: 28px; }
+.tri article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.tri .meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.tri .meta b { font-family: var(--display); font-size: 24px; text-transform: uppercase; color: var(--brand); }
+.tri .meta span { color: var(--muted); font-size: 14px; }
+.tri figure a { box-shadow: none; border: 1px solid var(--line); }
+.tri figcaption { font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+.dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.dl a { display: block; padding: 12px 14px; border-radius: 8px; background: #001050; color: #fff; font-weight: 700; font-size: 14px; text-decoration: none; }
+.dl a::before { content: "↓  "; color: var(--accent-2); }
+.dl a:hover, .dl a:focus-visible { background: #12998d; outline: none; }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.notes div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.notes h3 { font-family: var(--display); font-size: 20px; text-transform: uppercase; color: var(--brand); margin: 0 0 6px; }
+.notes p { margin: 0; color: var(--muted); font-size: 14px; }
+.reels { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.reel { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #000; display: block; }
+@media (max-width: 640px) { .before, .tri article { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Clean Solutions LIM · octubre 2026</div>
+    <h1>5 flyers y 5 trípticos <span>para Cartagena y el resto del país</span></h1>
+    <p class="lead">Rediseño del volante de Cartagena con los colores reales de la marca, las tarifas publicadas en la web y un QR de WhatsApp por pieza. Toca cualquier imagen para verla en grande.</p>
+    <div class="facts"><span>Flyers A5 · 148 × 210 mm</span><span>Trípticos A4 horizontal</span><span>PDF para imprenta + PNG para WhatsApp</span></div>
+  </header>
+
+  <section>
+    <div class="head"><div class="eyebrow">Mockups animados</div><h2>Las 10 piezas sobre mesas reales</h2></div>
+    <p class="lead" style="margin-top:0">Dos versiones con la misma edición y distinta música. Los cortes caen en el compás: dos compases por flyer y tres por tríptico. Sube el volumen.</p>
+    <div class="reels">
+      <figure><video class="reel" src="img/reel-upbeat-forever.mp4" poster="img/reel-poster.jpg" controls playsinline preload="metadata"></video><figcaption><b>A · Pop moderno</b>«Upbeat Forever», Kevin MacLeod</figcaption></figure>
+      <figure><video class="reel" src="img/reel-wepa.mp4" poster="img/reel-poster.jpg" controls playsinline preload="metadata"></video><figcaption><b>B · Latino caribeño</b>«Wepa», Kevin MacLeod</figcaption></figure>
+    </div>
+    <p class="lead" style="margin-top:0;font-size:14px">Licencia Creative Commons Atribución 4.0: se puede usar en anuncios, siempre que se acredite al autor. El crédito ya está en el cierre del video; al publicar, añádelo también en la descripción.</p>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">Punto de partida</div><h2>Lo que mejoramos del volante actual</h2></div>
+    <div class="before">
+      <figure><a href="img/original.jpg" target="_blank" rel="noopener"><img src="img/original.jpg" alt="Volante anterior de Clean Solutions LIM" loading="lazy"></a><figcaption><b>Volante anterior</b>La base de la que partimos</figcaption></figure>
+      <ul>
+        <li><b>Colores de la marca.</b> Todas las piezas usan el turquesa y el azul del logo y el azul marino de la web, para que se reconozcan a primera vista.</li>
+        <li><b>Un texto propio para cada servicio.</b> Limpieza posincendio, obra, oficinas y vidrios tienen ahora su propia descripción, clara y concreta.</li>
+        <li><b>Todo lo necesario para contratar.</b> Precios reales, WhatsApp, correo, web, Instagram y un QR que abre el chat con el mensaje ya escrito.</li>
+        <li><b>Fotografía profesional.</b> Imágenes de alta resolución, elegidas una a una, que muestran el trabajo de limpieza tal como es.</li>
+        <li><b>Un solo estilo visual.</b> Dos familias tipográficas y una línea de iconos común, para que el mensaje principal destaque.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">Flyers A5</div><h2>Cinco públicos, cinco mensajes</h2></div>
+    <div class="grid5">
+      <figure><a href="img/flyer-1.jpg" target="_blank" rel="noopener"><img src="img/flyer-1.jpg" alt="Flyer 1 Esencial" loading="lazy"></a><figcaption><b>1 · Esencial</b>El volante original bien hecho, con tarifas por horas. QR <span class="code">F1</span></figcaption></figure>
+      <figure><a href="img/flyer-2.jpg" target="_blank" rel="noopener"><img src="img/flyer-2.jpg" alt="Flyer 2 Cartagena" loading="lazy"></a><figcaption><b>2 · Cartagena</b>Centro histórico al atardecer, aseo por días y Airbnb. QR <span class="code">F2</span></figcaption></figure>
+      <figure><a href="img/flyer-3.jpg" target="_blank" rel="noopener"><img src="img/flyer-3.jpg" alt="Flyer 3 Airbnb" loading="lazy"></a><figcaption><b>3 · Anfitriones</b>«Entre el check-out y el check-in, nosotros». QR <span class="code">F3</span></figcaption></figure>
+      <figure><a href="img/flyer-4.jpg" target="_blank" rel="noopener"><img src="img/flyer-4.jpg" alt="Flyer 4 Obras y empresas" loading="lazy"></a><figcaption><b>4 · Obras y empresas</b>«Entrega la obra lista para estrenar». QR <span class="code">F4</span></figcaption></figure>
+      <figure><a href="img/flyer-5.jpg" target="_blank" rel="noopener"><img src="img/flyer-5.jpg" alt="Flyer 5 Sin cargas laborales" loading="lazy"></a><figcaption><b>5 · Sin cargas</b>«Tú pagas la tarifa. Nosotros, las prestaciones.» QR <span class="code">F5</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">Trípticos A4</div><h2>Exterior e interior de cada brochure</h2></div>
+    <div class="tri">
+      <article><div class="meta"><b>1 · Corporativo</b><span>Nacional, sin precios, QR a la web</span></div>
+        <figure><a href="img/brochure-1-ext.jpg" target="_blank" rel="noopener"><img src="img/brochure-1-ext.jpg" alt="Brochure 1, exterior" loading="lazy"></a><figcaption>Exterior</figcaption></figure>
+        <figure><a href="img/brochure-1-int.jpg" target="_blank" rel="noopener"><img src="img/brochure-1-int.jpg" alt="Brochure 1, interior" loading="lazy"></a><figcaption>Interior</figcaption></figure></article>
+      <article><div class="meta"><b>2 · Cartagena</b><span>Aseo por días, planes mensuales y Airbnb · QR <span class="code">B2</span></span></div>
+        <figure><a href="img/brochure-2-ext.jpg" target="_blank" rel="noopener"><img src="img/brochure-2-ext.jpg" alt="Brochure 2, exterior" loading="lazy"></a><figcaption>Exterior</figcaption></figure>
+        <figure><a href="img/brochure-2-int.jpg" target="_blank" rel="noopener"><img src="img/brochure-2-int.jpg" alt="Brochure 2, interior" loading="lazy"></a><figcaption>Interior</figcaption></figure></article>
+      <article><div class="meta"><b>3 · Empresas y obras</b><span>Cumplimiento legal y proceso de trabajo · QR <span class="code">B3</span></span></div>
+        <figure><a href="img/brochure-3-ext.jpg" target="_blank" rel="noopener"><img src="img/brochure-3-ext.jpg" alt="Brochure 3, exterior" loading="lazy"></a><figcaption>Exterior</figcaption></figure>
+        <figure><a href="img/brochure-3-int.jpg" target="_blank" rel="noopener"><img src="img/brochure-3-int.jpg" alt="Brochure 3, interior" loading="lazy"></a><figcaption>Interior</figcaption></figure></article>
+      <article><div class="meta"><b>4 · Anfitriones Airbnb</b><span>Preguntas frecuentes, precios y 4 pasos · QR <span class="code">B4</span></span></div>
+        <figure><a href="img/brochure-4-ext.jpg" target="_blank" rel="noopener"><img src="img/brochure-4-ext.jpg" alt="Brochure 4, exterior" loading="lazy"></a><figcaption>Exterior</figcaption></figure>
+        <figure><a href="img/brochure-4-int.jpg" target="_blank" rel="noopener"><img src="img/brochure-4-int.jpg" alt="Brochure 4, interior" loading="lazy"></a><figcaption>Interior</figcaption></figure></article>
+      <article><div class="meta"><b>5 · Planes mensuales</b><span>Los 15 precios, sin cruzar ningún pliegue · QR <span class="code">B5</span></span></div>
+        <figure><a href="img/brochure-5-ext.jpg" target="_blank" rel="noopener"><img src="img/brochure-5-ext.jpg" alt="Brochure 5, exterior" loading="lazy"></a><figcaption>Exterior</figcaption></figure>
+        <figure><a href="img/brochure-5-int.jpg" target="_blank" rel="noopener"><img src="img/brochure-5-int.jpg" alt="Brochure 5, interior" loading="lazy"></a><figcaption>Interior</figcaption></figure></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">Para imprimir</div><h2>Archivos y notas para la imprenta</h2></div>
+    <div class="dl">
+      <a href="descargas/flyer-1-esencial-sangrado-3mm.pdf" download>Flyer 1 · Esencial</a>
+      <a href="descargas/flyer-2-cartagena-sangrado-3mm.pdf" download>Flyer 2 · Cartagena</a>
+      <a href="descargas/flyer-3-airbnb-sangrado-3mm.pdf" download>Flyer 3 · Anfitriones</a>
+      <a href="descargas/flyer-4-obras-empresas-sangrado-3mm.pdf" download>Flyer 4 · Obras y empresas</a>
+      <a href="descargas/flyer-5-sin-cargas-sangrado-3mm.pdf" download>Flyer 5 · Sin cargas</a>
+      <a href="descargas/brochure-1-corporativo-sangrado-3mm.pdf" download>Tríptico 1 · Corporativo</a>
+      <a href="descargas/brochure-2-cartagena-sangrado-3mm.pdf" download>Tríptico 2 · Cartagena</a>
+      <a href="descargas/brochure-3-empresas-sangrado-3mm.pdf" download>Tríptico 3 · Empresas y obras</a>
+      <a href="descargas/brochure-4-airbnb-sangrado-3mm.pdf" download>Tríptico 4 · Anfitriones Airbnb</a>
+      <a href="descargas/brochure-5-planes-sangrado-3mm.pdf" download>Tríptico 5 · Planes mensuales</a>
+    </div>
+    <div class="notes">
+      <div><h3>Medir qué funciona</h3><p>Cada QR abre WhatsApp con un mensaje que termina en su código (F1 a F5, B2 a B5). Contando esos códigos en los chats se sabe qué pieza trae clientes.</p></div>
+      <div><h3>Listos para imprenta</h3><p>Los PDF llevan 3 mm de sangrado por lado (A5 → 154 × 216 mm, A4 → 303 × 216 mm). Van en RGB; si la imprenta trabaja en CMYK, ella hace la conversión.</p></div>
+      <div><h3>Plegado</h3><p>En el plegado en rodillo la solapa interior suele medir 97 mm. Confirmar la medida con la imprenta antes de la tirada.</p></div>
+      <div><h3>Fotos</h3><p>Fotos de banco de Pexels, revisadas una a una. No se presentan como personal de la empresa.</p></div>
+    </div>
+  </section>
+</div>
+<footer style="max-width:1180px;margin:0 auto;padding-block:0 40px;color:var(--muted);font-size:13px">Clean Solutions LIM S.A.S. · NIT 901.854.503-6 · cleansolutionslim.com.co</footer>
+</body>
+</html>
